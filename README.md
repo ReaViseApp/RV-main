@@ -1,19 +1,36 @@
-# ReaVise (RV) — Demo
-
-This repository contains the ReaVise web app. A GitHub Actions workflow is added to build and deploy the frontend from the `demo-site` branch to GitHub Pages.
-
-Quick notes:
-
-- Trigger demo deploy: push to the `demo-site` branch.
-- Frontend build: `npm run build` (in the `frontend` folder).
-- The demo workflow output directory is `frontend/dist`.
-
-If you want me to change the repo name, visibility, or PR title/body, tell me and I'll update them.
 # ReaVise Platform
 
 ![ReaVise Logo](https://via.placeholder.com/150x50?text=ReaVise)
 
 **ReaVise** is a comprehensive creative content sharing platform that combines social media, e-commerce, and NFT auction functionality. It enables users to search and match their creative demands with design proposals for deeply personalized transactions.
+
+## 🌐 Live Demo
+
+**[View Live Demo →](https://[username].github.io/RV-main/)**
+
+Experience the full UI with mock data - no backend required!
+
+### Demo Features
+- ✅ Interactive 3D navigation (Rubik's Cube/Cylinder)
+- ✅ Browse posts across all categories
+- ✅ User profiles and interactions
+- ✅ Full responsive design
+- ✅ All UI components visible
+
+> **Note**: The demo uses simulated data and runs entirely in the browser. For full functionality with backend, see [Development Guide](docs/DEVELOPMENT_GUIDE.md).
+
+## 🚀 Quick Start
+
+### Try the Demo Locally
+```bash
+cd frontend
+cp .env.demo .env
+npm install
+npm run dev
+```
+
+### Full Development Setup
+See [DEVELOPMENT_GUIDE.md](docs/DEVELOPMENT_GUIDE.md) for complete setup with backend.
 
 ## 🎯 Overview
 
@@ -359,6 +376,40 @@ npm run check  # TypeScript checking
 cd backend
 go test ./...
 ```
+
+## 🌐 Demo Deployment
+
+### GitHub Pages Demo
+
+The project includes automated demo deployment to GitHub Pages.
+
+#### Setup GitHub Pages
+
+1. Go to repository Settings → Pages
+2. Set Source to "GitHub Actions"
+3. Save
+
+#### Deploy Demo
+
+```bash
+# Push to demo-site branch to trigger deployment
+git checkout demo-site
+git merge main
+git push origin demo-site
+```
+
+The demo will be available at: `https://[username].github.io/RV-main/`
+
+#### Local Demo Testing
+
+```bash
+cd frontend
+cp .env.demo .env
+npm install
+npm run dev
+```
+
+For complete demo setup instructions, see [DEMO_SETUP.md](docs/DEMO_SETUP.md).
 
 ## 📊 API Documentation
 
